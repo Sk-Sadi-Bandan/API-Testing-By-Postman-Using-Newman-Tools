@@ -1,0 +1,52 @@
+﻿API Testing Postman videos:
+https://www.youtube.com/watch?v=pUGmhtqVJRk
+https://www.youtube.com/watch?v=r4fL-01Tyhc
+https://www.youtube.com/watch?v=lId_LdQ8wXU
+
+
+
+
+Newman Installation & Run Process from CLI:
+https://www.youtube.com/watch?v=8nDZ6seDQEA
+
+
+1. Make a Collections in postman (Get, Post, Delete, Update) == Done
+
+
+2. Download & Install NodeJS == Done
+After install successfully, then check the NodeJS from Environment Variable & CMD
+        node --version
+        npm --version
+
+
+3. Install Newman from CMD
+npm install -g newman
+
+
+4. After install successfully Newman, then check the Newman from CMD
+        newman -v
+
+
+5. Download or Export the Collection, which are created in Postman in specific Local directory
+
+
+6. Then go to the specific Local directory from CMD
+cd downloads
+
+
+7. Now run the Newman full suits from CMD
+                newman run BookStoreAPIs.postman_collection.json
+Or
+Newman run “Copy Link”
+        
+8. If fail the run Collection, then download or export the collection environment
+
+
+9. Now again run the Newman full suits with exported Collection from CMD
+                newman run BookStoreAPIs.postman_collection.json -e DevEnvironment.postman_environment.json
+
+
+10. Generate HTML reports in Newman from CMD
+                npm install -g newman-reporter-html
+                npm install newman-reporter-html
+                newman run "ReqresAPIs.postman_collection.json" -r html
